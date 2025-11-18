@@ -9,8 +9,8 @@ export interface IData {
   completedOn: string
 }
 
-export interface ApiResponse<T> {
-  data: T;
+export interface ApiResponse<IData> {
+  data: IData;
   status?: string;
   message?: string;
 }
