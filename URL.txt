@@ -1,0 +1,4 @@
+GET All TASKS     https://freeapi.miniprojectideas.com/api/JWT/GetAllTaskList
+POST CREATE NEW TASK    https://freeapi.miniprojectideas.com/api/JWT/CreateNewTask
+UPDATE TASK         https://freeapi.miniprojectideas.com/api/JWT/UpdateTask
+DELETE TASAK        https://freeapi.miniprojectideas.com/api/JWT/DeleteTask
