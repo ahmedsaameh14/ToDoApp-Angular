@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IData } from '../interface/data';
+import { ApiResponse, IData } from '../interface/data';
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +12,8 @@ export class ToDoService {
 
   URL = "https://freeapi.miniprojectideas.com/api/JWT/"
 
-  getAllTasks(): Observable<IData[]> {
-    return this.http.get<IData[]>(this.URL + "GetAllTaskList")
+  getAllTasks(): Observable<ApiResponse<IData[]>> {
+    return this.http.get<ApiResponse<IData[]>>(this.URL + "GetAllTaskList")
   }
 
   createNewTasks(data: IData): Observable<IData> {
@@ -27,5 +27,5 @@ export class ToDoService {
   deleteTask(id: string):Observable<any>{
     return this.http.delete(`${this.URL} DeleteTask?itemId=${id}`)
   }
-  
+
 }

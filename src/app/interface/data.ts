@@ -8,3 +8,10 @@ export interface IData {
   tags: string
   completedOn: string
 }
+
+export interface ApiResponse<T> {
+  data: T;
+  status?: string;
+  message?: string;
+}
+
