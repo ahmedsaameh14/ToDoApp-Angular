@@ -16,8 +16,8 @@ export class ToDoService {
     return this.http.get<ApiResponse<IData[]>>(this.URL + "GetAllTaskList")
   }
 
-  createNewTasks(data: IData): Observable<IData> {
-    return this.http.post<IData>(this.URL + "CreateNewTask" , data)
+  createNewTasks(body: IData): Observable<ApiResponse<IData>> {
+    return this.http.post<ApiResponse<IData>>(this.URL + "CreateNewTask", body);
   }
 
   updateTask(data: IData): Observable<IData>{

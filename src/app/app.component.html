@@ -1,9 +1,30 @@
 <h1>To Do App</h1>
 
+<div>
+  <form [formGroup]="form" (ngSubmit)="createNewTask()">
+    <div>
+      <label>Task Name: </label>
+      <input formControlName="taskName" type="text" />
+    </div>
+    <div>
+      <label>Task Description: </label>
+      <input formControlName="taskDescription" type="text" />
+    </div>
+    <div>
+      <label>Task Tages: </label>
+      <input formControlName="tags" type="text" />
+    </div>
+    <button type="submit">Add</button>
+  </form>
+</div>
+
+<br><br>
+
+
 <div *ngFor="let item of list">
-  <p>ID:"{{item.itemId}}"</p>
-  <p>Task Name:"{{item.taskName}}"</p>
-  <p>Task Desc:"{{item.taskDescription}}"</p>
-  <p>Task Tags:"{{item.tags}}"</p>
-  <p>Created On:"{{item.createdOn}}"</p>
+  <p>ID:"{{ item.itemId }}"</p>
+  <p>Task Name:"{{ item.taskName }}"</p>
+  <p>Task Desc:"{{ item.taskDescription }}"</p>
+  <p>Task Tags:"{{ item.tags }}"</p>
+  <p>Created On:"{{ item.createdOn }}"</p>
 </div>
